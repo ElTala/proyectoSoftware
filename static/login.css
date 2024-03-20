@@ -101,6 +101,7 @@ section .signin .content .form
 section .signin .content .form .inputBox
 {
   position: relative;
+  align-items: center;
   width: 100%;
 }
 section .signin .content .form .inputBox input 

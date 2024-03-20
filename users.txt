@@ -1,0 +1,12 @@
+admin,password
+user1,password1
+user2,password2
+q,q
+a,wyoming
+polo polo,judas
+big smoke,negus
+Michael de Santa,crack
+Niko Bellic,lesgobowling
+tequereque,salmonera
+v,v
+b,otranuevaHJola,a

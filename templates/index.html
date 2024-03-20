@@ -1,10 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Aplicación Flask</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  #banner {
+    background-color: #333;
+  }
+
+  #banner ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #banner li {
+    position: relative;
+  }
+
+  #banner li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  #banner li:hover a {
+    background-color: #111;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    display: block;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #111;
+  }
+
+  #banner li:hover .dropdown-content {
+    display: block;
+  }
+</style>
 </head>
 <body>
-    <h1>Hola, Mundo desde Flask!</h1>
+
+<div id="banner">
+  <ul>
+    <li>
+      <a class="active" href="#home">Inicio</a>
+      <div class="dropdown-content">
+        <a href="/camara">Visita VR</a>
+        <a href="#">Usuario</a>
+        <a href="#">Perfil</a>
+      </div>
+    </li>
+    <li>
+      <a href="#news">Noticias</a>
+      <div class="dropdown-content">
+        <a href="#">Recientes...</a>
+        <a href="#">Historia sobre la pagina</a>
+        <a href="#">Todo sobre VR</a>
+      </div>
+    </li>
+    <li>
+      <a href="#contact">Contacto</a>
+      <div class="dropdown-content">
+        <a href="#">Nombre</a>
+        <a href="#">Direccion</a>
+        <a href="#">Numero Telefonico</a>
+      </div>
+    </li>
+    <li>
+      <a href="#about">Acerca de</a>
+      <div class="dropdown-content">
+        <a href="#">¿Que somos?</a>
+        <a href="#">Grupo</a>
+        <a href="#">Nosotros...</a>
+      </div>
+    </li>
+  </ul>
+</div>
+
 </body>
 </html>
