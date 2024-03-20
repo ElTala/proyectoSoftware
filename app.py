@@ -1,5 +1,13 @@
 from flask import Flask, render_template, Response, request, redirect, url_for
+import smtplib
+from email.message import EmailMessage
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 import requests
+import smtplib
+import email.utils
+from email.message import EmailMessage
+from email.mime.text import MIMEText
 app = Flask(__name__)
 
 @app.route('/')
@@ -35,6 +43,7 @@ def register():
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
+        
         with open('users.txt', 'r') as f:
             users = [line.strip().split(',')[0] for line in f]
             if username in users:
@@ -42,7 +51,22 @@ def register():
             else:
                 with open('users.txt', 'a') as f:
                     f.write(f'{username},{password}\n')
+                remitente = "aperez71@uabc.edu.mx"
+                destinatario = request.form.get('email')
+                mensaje = "Hola, le damos la bienvenida a nuestro sistema de VR"
+                email = EmailMessage()
+                email["From"] = remitente
+                email["To"] = destinatario
+                email["Subject"] = "Bienvenid@"
+                email.set_content(mensaje)
+                smtp = smtplib.SMTP_SSL("smtp.gmail.com")
+                smtp.login(remitente, "assgnmvyhknnllul")
+                smtp.sendmail(remitente, destinatario, email.as_string())
+                smtp.quit()
                 return redirect(url_for('login'))
+            
+
+
     return render_template('register.html', error=error)
 
 #Contraseña olvidada

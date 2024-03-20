@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>GademVR</title>
 <style>
   body {
     margin: 0;
@@ -57,38 +58,59 @@
   #banner li:hover .dropdown-content {
     display: block;
   }
+
+  #news-section {
+    display: flex;
+  justify-content: center;
+    align-items: center ;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .news-item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .news-item img {
+    align-items: center;
+    width: 75%;
+    height: auto;
+    align-content: center;
+  }
+
+  .news-item p {
+    padding: 0 20px 20px;
+  }
 </style>
 </head>
 <body>
 
 <div id="banner">
   <ul>
-    <li>
-      <a class="active" href="#home">Inicio</a>
+    <li><a class="active" href="#home">Inicio</a>
       <div class="dropdown-content">
         <a href="/camara">Visita VR</a>
         <a href="#">Usuario</a>
         <a href="#">Perfil</a>
       </div>
     </li>
-    <li>
-      <a href="#news">Noticias</a>
+    <li><a href="#news">Noticias</a>
       <div class="dropdown-content">
         <a href="#">Recientes...</a>
         <a href="#">Historia sobre la pagina</a>
         <a href="#">Todo sobre VR</a>
       </div>
     </li>
-    <li>
-      <a href="#contact">Contacto</a>
+    <li><a href="#contact">Contacto</a>
       <div class="dropdown-content">
         <a href="#">Nombre</a>
         <a href="#">Direccion</a>
         <a href="#">Numero Telefonico</a>
       </div>
     </li>
-    <li>
-      <a href="#about">Acerca de</a>
+    <li><a href="#about">Acerca de</a>
       <div class="dropdown-content">
         <a href="#">¿Que somos?</a>
         <a href="#">Grupo</a>
@@ -96,6 +118,21 @@
       </div>
     </li>
   </ul>
+</div>
+
+<div id="news-section">
+  <div class="news-item">
+    <img src="https://assets.website-files.com/62582f97809e211f255b62a3/626d3168fbea86f03835d015_610a62008d041a1d695fe961_Aircards%2520Main.jpeg" alt="Noticia 1">
+    <p>Investigadores del MIT han desarrollado un casco de realidad aumentada llamado X-AR, que permite a los usuarios encontrar objetos ocultos utilizando tecnología RFID. Esta innovación permite visualizar objetos dentro de cajas o detrás de esquinas, mejorando la precisión en la localización de objetos hasta en un 99%</p>
+  </div>
+  <div class="news-item">
+    <img src="https://assets.poplar.studio/wp-content/uploads/2020/06/23175516/ar-experiences-1.jpg" alt="Noticia 2">
+    <p>Un equipo de la Universidad de Melbourne, en colaboración con KDH Design Corporation, ha creado una pantalla de AR transparente utilizando polímeros y plásticos de bajo costo. Esta tecnología flexible y transparente se puede integrar en dispositivos como gafas de AR y cascos, ofreciendo una vista natural mientras se superponen contenidos digitales​</p>
+  </div>
+  <div class="news-item">
+    <img src="https://media.licdn.com/dms/image/D4D12AQFUPhBUbaPMhA/article-cover_image-shrink_720_1280/0/1694600460839?e=2147483647&v=beta&t=otIMd0A07Ge8zRnUJeM64EioZrJkTikK3mL0SaOBHzc" alt="Noticia 3">
+    <p>Recortes en la división de AR de Google: Google ha confirmado despidos que afectan a cientos de trabajadores, especialmente en su segmento de realidad aumentada. Esto coincide con la salida de figuras notables de Fitbit, como sus cofundadores James Park y Eric Friedman</p>
+  </div>
 </div>
 
 </body>
