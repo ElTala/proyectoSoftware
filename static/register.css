@@ -180,3 +180,20 @@ input[type="submit"]:active
     height: calc(20vw - 2px);
   }
 }
+.togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 5px; /* Ajusta la distancia desde el borde derecho */
+    transform: translateY(-50%);
+    font-size: 0.8em; /* Ajusta el tamaño del icono */
+    cursor: pointer;
+    color: #fff; /* Color del icono */
+    background-color: #333; /* Cambia el fondo al mismo color que el fondo del input */
+    border: none; /* Elimina el borde */
+    outline: none !important; /* Elimina el contorno (incluso si está siendo sobrescrito) */
+    box-shadow: none; /* Elimina cualquier sombra */
+    z-index: 10; /* Asegura que el icono esté por encima de otros elementos */
+    width: 25px; /* Ajusta el ancho del icono */
+    height: 25px; /* Ajusta la altura del icono */
+    transition: none; /* Elimina la transición de color al pasar el mouse */
+}

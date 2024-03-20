@@ -2,30 +2,61 @@
 <html lang="en"> 
  <head> 
   <meta charset="UTF-8"> 
-  <title>Iniciar sesion</title>
-  <link rel="stylesheet" href="../static/login.css"> 
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="../static/register.css"> 
+  <script>
+    function verificarContraseñas() {
+        var contraseña = document.getElementById("contraseña").value;
+        var confirmarContraseña = document.getElementById("confirmarContraseña").value;
+    
+        if (contraseña != confirmarContraseña) {
+            alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
+            return false;
+        }
+        return true;
+    }
+    </script>
+    <script>
+        function togglePasswordVisibility(inputId, iconId) {
+            var input = document.getElementById(inputId);
+            var icon = document.getElementById(iconId);
+        
+            if (input.type === "password") {
+                input.type = "text";
+                icon.innerHTML = "👁️"; 
+            } else {
+                input.type = "password";
+                icon.innerHTML = "◠"; 
+            }
+        }
+        </script>
  </head> 
  <body>
   <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
    <div class="signin"> 
     <div class="content"> 
-     <h2>Iniciar sesion</h2> 
+     <h2>Registrarse</h2> 
      <div class="form"> 
       <div class="inputBox"> 
        <input type="text" required> <i>Nombre de usuario</i> 
       </div> 
       <div class="inputBox"> 
-       <input type="password" required> <i>Contraseña</i> 
-      </div> 
-      <div class="links"> <a href="#">Olvide mi contraseña</a> 
-       <a href="http://127.0.0.1:5000/register">Registrarse</a> 
-      </div> 
-      <div class="inputBox"> 
-       <input type="submit" value="Iniciar sesion"> 
-      </div> 
-     </div> 
+        <input type="password" id="contraseña" required> <i>Contraseña</i> 
+        <span id="togglePassword" class="togglePassword" onclick="togglePasswordVisibility('contraseña', 'togglePassword')">◠</span>
     </div> 
-   </div> 
+    <div class="inputBox"> 
+        <input type="password" id="confirmarContraseña" required> <i>Confirmar contraseña</i> 
+        <span id="toggleConfirmPassword" class="togglePassword" onclick="togglePasswordVisibility('confirmarContraseña', 'toggleConfirmPassword')">◠</span>
+    </div> 
+      <div class="inputBox"> 
+        <input type="email" required> <i>Correo</i> 
+       </div> 
+      <div class="inputBox"> 
+       <input type="submit" value="Registrarse"> 
+      </div> 
+     </div>
+    </div>  
+    </div> 
   </section>
  </body>
 </html>
