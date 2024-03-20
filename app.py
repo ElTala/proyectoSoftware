@@ -60,7 +60,7 @@ def register():
                 email["Subject"] = "Bienvenid@"
                 email.set_content(mensaje)
                 smtp = smtplib.SMTP_SSL("smtp.gmail.com")
-                smtp.login(remitente, "assgnmvyhknnllul")
+                smtp.login(remitente)
                 smtp.sendmail(remitente, destinatario, email.as_string())
                 smtp.quit()
                 return redirect(url_for('login'))
